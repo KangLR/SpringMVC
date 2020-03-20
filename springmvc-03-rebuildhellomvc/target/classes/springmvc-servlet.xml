@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--真实开发会自动配置，学原理才需要-->
+    <!--处理器映射器
+    根据bean的名字找
+    -->
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+    <!--处理器适配器-->
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+
+
+    <bean id="/hello" class="com.kang.controller.HelloController"/>
+
+
+
+
+    <!--视图解析器
+    模板引擎：thymeleaf  freemarker ...
+    下面这个类是可以变得
+
+    得到ModelAndView，把视图的名字拼接上
+    交给DispacterServlet
+    用户就拿到数据了
+    -->
+    <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+
+
+
+</beans>

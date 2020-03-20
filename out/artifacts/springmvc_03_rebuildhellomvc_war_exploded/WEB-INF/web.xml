@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!--不走传统的servlet了，我们配置一个dispatcherServlet，这个式springmvc的核心：请求分发器/前端控制器-->
+    <servlet>
+        <servlet-name>springmvc</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+
+        <!--DS要绑定spring的配置文件-->
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:springmvc-servlet.xml</param-value>
+        </init-param>
+        <!--跟服务器一块启动-->
+        <load-on-startup>1</load-on-startup>
+
+
+    </servlet>
+
+    <!--所有的请求都走这
+    /   只匹配所有的请求，不匹配jsp
+    /*  包括jsp 如果用了它，就会无限嵌套 hello.jsp.jsp.jsp...
+    因为jsp页面是个完善的页面，直接返回给用户，用了/*就会走上面那个，无限嵌套
+    -->
+    <servlet-mapping>
+        <servlet-name>springmvc</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+
+
+</web-app>

@@ -7,5 +7,7 @@
     <file url="file://$PROJECT_DIR$/springmvc-02-hellomvc/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springmvc-03-rebuildhellomvc/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springmvc-03-rebuildhellomvc/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springmvc-04-annotation/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springmvc-04-annotation/src/main/resources" charset="UTF-8" />
   </component>
 </project>

@@ -13,6 +13,8 @@
         <module>springmvc-02-hellomvc</module>
         <module>springmvc-03-rebuildhellomvc</module>
         <module>springmvc-04-annotation</module>
+        <module>springmvc-05-controller</module>
+        <module>springmvc-06-json</module>
     </modules>
 
     <dependencies>
